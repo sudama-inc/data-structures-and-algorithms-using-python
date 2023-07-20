@@ -1,2 +1,2 @@
-# data-structures-and-algorithms-using-java
-Data Structures and Algorithm using Java from Beginner to Advance  
+# data-structures-and-algorithms-using-pyton
+Data Structures and Algorithm using Python from Beginner to Advance  
