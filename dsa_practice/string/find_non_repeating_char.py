@@ -10,52 +10,54 @@ https://www.geeksforgeeks.org/given-a-string-find-its-first-non-repeating-charac
 """
 from collections import Counter
 
+# Nth non-repeating character in a given string
+def nth_non_rep_char(st, c):
+    non_rep = ''.join([i for i in st if st.count(i) ==1])
+    return non_rep[c-1]
+
+st = 'hello'
+c = 2
+print(nth_non_rep_char(st))
+
+
 # Method 1
 # Try for all non-repeted
+
+def all_non_rep_char(st):
+    # non_rep = ''.join([i for i in st if st.count(i) ==1])
+    s1 = ''
+    for i in st:
+        count = st.count(i)
+        if count == 1:
+            s1 = s1+i
+        
+    return s1
+
 st = 'hello'
-s1 = ''
-for i in st:
-    count = st.count(i)
-    if count > 1:
-        pass
-    else:
-        s1 = s1+i
-print(s1)
+print(all_non_rep_char(st))
 
 
 # Method 1
 # Python program to print the first non-repeating character
-string = "geeksforgeeks"
-index = -1
-fnc = ""
 
-if len(string) == 0:
-    print("EMTPY STRING")
+string = "gereksgeeks"
+index = 0
 
-for i in string:
-    if string.count(i) == 1:
-        fnc += i
-        break
-    else:
-        index += 1
-if index == len(string)-1:
-    print("All characters are repeating ")
-else:
-    print("First non-repeating character is", fnc)
+def first_non_repeating_char(string, index):
+    fnc = ""
 
+    if len(string) == 0:
+        print("EMTPY STRING")
 
-# Method 2
-# Function which repeats first Nonrepeating character
-def printNonrepeated(string):
-    # Calculating frequencies using Counter function
-    freq = Counter(string)
-    # Traverse the string
     for i in string:
-        if (freq[i] == 1):
-            print("First non-repeating character is " + i)
+        if string.count(i) == 1:
+            fnc += i
             break
+        else:
+            index += 1
+    if index == len(string):
+        return "All characters are repeating "
+    else:
+        return (f"First non-repeating character is {fnc} on index {index}")
 
 
-# Driver code
-string = "geeksforgeeks"
-print(printNonrepeated(string))

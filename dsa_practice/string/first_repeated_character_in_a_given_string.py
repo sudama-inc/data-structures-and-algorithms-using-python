@@ -29,33 +29,6 @@ for i in range(0, len(st)-1):
         break
 
 
-# Method 2
-st = 'geeks'
-found_dict = {}
-for i in st:
-    if i in found_dict:
-        print(i)
-        break
-    else:
-        found_dict[i] = 1
-
-
-# Method 3
-def firstRepeatedChar(str):
-    h = {}  # Create empty hash
-    # Traverse each characters in string in lower case order
-    for ch in str:
-        # If character is already present in hash, return char
-        if ch in h:
-            return ch
-        else:
-            h[ch] = 0
-    return ''
-
-
-# Driver code
-print(firstRepeatedChar("geeksforgeeks"))
-
 
 # Method 4
 def findChar(inputString):

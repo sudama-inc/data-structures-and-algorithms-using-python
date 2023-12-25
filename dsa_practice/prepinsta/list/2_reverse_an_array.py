@@ -32,13 +32,15 @@ Print array
 def reverseList(A, start, end):
     while start < end:
         A[start], A[end] = A[end], A[start]
-        start += 1
+        start += 1        
         end -= 1
-
+        
+    return A
 
 A = [10, 20, 30, 40, 50]
-reverseList(A, 0, 4)
-print(A)
+start=0 
+end=len(A)-1
+print(reverseList(A, start, end))
 
 
 """
@@ -57,7 +59,9 @@ def reverseList(arr, start, end):
 
 # Driver function to test above function
 A = [10, 20, 30, 40, 50]
-reverseList(A, 0, 4)
+start=0 
+end=len(A)-1
+reverseList(A, start, end)
 print(A)
 
 

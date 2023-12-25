@@ -18,7 +18,7 @@ Run a loop till first half and print the element.
 Run a loop for second half and print the elements.
 
 sort() function
-The sort() method is a built-in Python method that, by default,sorts the list
+The sort() method is a built-in Python method that, by default, sorts the list
 in ascending order. However, you can modify the order from ascending to
 descending by specifying the sorting criteria.
 """
@@ -26,19 +26,21 @@ descending by specifying the sorting criteria.
 
 def printOrder(arr, n):
     arr.sort()
+    res = []
 
     # printing first half in ascending order
     i = 0
     while i < n / 2:
-        print(arr[i])
+        res.append(arr[i])
         i = i + 1
 
     # printing second half in descending order
     j = n - 1
     while j >= n / 2:
-        print(arr[j])
+        res.append(arr[j])
         j = j - 1
 
+    return res
 
 # Driver code
 arr = [5, 4, 6, 2, 1, 3, 8, 9, 7]
@@ -62,14 +64,16 @@ remain in the first half but in descending order)
 
 def printOrder(arr, n):
     arr.sort()
+    res = []
 
     # printing first half in ascending order
     for i in range(n / 2):
-        print(arr[i], end=" ")
+        res.append(arr[i])
 
     # printing second half in descending order
     for j in range(n - 1, n // 2 - 1, -1):
-        print(arr[j], end=" ")
+        res.append(arr[j])
+    return res
 
 
 # Driver code

@@ -31,7 +31,7 @@ print(sum)
 def findSum(num):
     if num == 0:
         return 0
-    return int(num % 10) + findSum(num / 10)
+    return int(num % 10) + findSum(num // 10)
 
 
 num = 12345
@@ -40,7 +40,7 @@ print(findSum(num))
 
 # Method 6: One Line recursive function
 def sumDigits(n):
-    return 0 if n == 0 else int(n % 10) + sumDigits(int(n / 10))
+    return 0 if n == 0 else int(n % 10) + sumDigits(int(n // 10))
 
 
 # Driver code

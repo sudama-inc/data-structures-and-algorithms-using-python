@@ -4,9 +4,14 @@
 
 """
 
+
+def reverse_words(st):
+    lst = st.split()
+    res = " ".join([lst[i] for i in range(len(lst)-1,-1,-1)])
+    return res
+
+
 # Method 1
-
-
 def reverse_string_words(text):
     for line in text.split('\n'):
         return(' '.join(line.split()[::-1]))

@@ -38,3 +38,31 @@
 #     sum += num % 10
 #     num = num // 10
 # print(sum)
+
+
+
+
+# st = 'restart'
+# k = '$'
+# s = ''
+
+# def remove_all_consecutive(st):
+#     k = '$'
+#     res = ""
+#     for i in range(len(st)):
+#         if st[i] in res:
+#             res += k
+#         else:
+#             res += st[i]
+
+#     return res
+
+# st ='restart'
+# print(remove_all_consecutive(st))
+
+# def reverse_words(st):
+#     pass
+
+# if __name__ == "__main__":
+#     input = "reverse"
+#     print(reverse_words(input))

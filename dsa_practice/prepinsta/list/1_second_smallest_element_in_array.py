@@ -15,40 +15,22 @@ Print(second)
 
 """
 import math
+
+
+def first_second_element(arr):
+    first = math.inf
+    second = math.inf
+
+    for i in range(0, len(arr)):
+        if arr[i] < first:
+            first = arr[i]
+        if arr[i] != first and arr[i] < second:
+            second = arr[i]
+
+    return first, second
+
 arr = [10, 13, 17, 11, 34, 21]
-first = math.inf
-second = math.inf
-
-for i in range(0, len(arr)):
-    if arr[i] < first:
-        first = arr[i]
-
-for i in range(0, len(arr)):
-    if arr[i] != first and arr[i] < second:
-        second = arr[i]
-
-print(second)
-
-
-"""
-Method 2 :
-Take two variable say first and second, set them to integer maximum value.
-Run a loop for range (0, len(arr))
-Check if first > arr[i], set second = first and first = arr[i]
-Else Check if ( arr[i] != first and arr[i]<second), set second = arr[i]
-Print(second)
-"""
-arr = [10, 13, 17, 11, 34, 21]
-first = second = math.inf
-for i in range(0, len(arr)):
-    if arr[i] < first:
-        second = first
-        first = arr[i]
-
-    elif (arr[i] < second and arr[i] != first):
-        second = arr[i]
-
-print(second)
+print(first_second_element(arr))
 
 
 """

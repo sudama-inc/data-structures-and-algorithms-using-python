@@ -9,6 +9,34 @@ https://www.geeksforgeeks.org/python-string-uncommon-characters/
 https://www.geeksforgeeks.org/concatenated-string-uncommon-characters-python/
 """
 
+
+# Example Usage
+string1 = "hello"
+string2 = "world"
+
+def uncommon_characters(str1, str2):
+    uncommon_chars = ''
+    for char in str1 + str2:
+        if (char not in str1) or (char not in str2):
+            uncommon_chars += char
+    
+    return uncommon_chars
+
+result = uncommon_characters(string1, string2)
+print(result)
+
+
+def uncommon_characters(str1, str2):
+    uncommon_chars = ''.join([char for char in str1 + str2 if (char not in str1) or (char not in str2)])
+    
+    return uncommon_chars
+
+result = uncommon_characters(string1, string2)
+print(result)
+
+
+
+
 # Method 1
 
 

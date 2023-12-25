@@ -35,8 +35,7 @@ print(st[::-1])
 def recursum(number, reverse):
     if number == 0:
         return reverse
-    remainder = int(number % 10)
-    reverse = (reverse*10)+remainder
+    reverse = (reverse*10) + int(number % 10)
     return recursum(int(number/10), reverse)
 
 

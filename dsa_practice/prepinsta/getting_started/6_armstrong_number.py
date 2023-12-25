@@ -12,7 +12,7 @@ Armstrong Number: In order to do so, we check whether the sum of the digits of
 each number to the power the length of the number is equal to the number itself
 or not. If the number is the same as the original, it’s an Armstrong number. 
 Mentioned below are a few of the Methods used to solve this problem,
-
+dsa_practice/prepinsta/getting_started
 """
 
 """

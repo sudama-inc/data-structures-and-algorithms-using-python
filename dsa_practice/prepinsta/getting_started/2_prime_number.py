@@ -1,4 +1,5 @@
 """
+***
 Prime Number Program in Python : Check Whether a Number is a Prime or Not in Python
 Given an integer input the objective is to write a program to Check Whether a Number is a Prime or Not in Python Language.
 
@@ -21,19 +22,6 @@ Method 4: Optimization by √n
 Method 5: Optimization by skipping even iteration
 Method 6: Basic Recursion technique
 """
-
-# Method 1: Simple iterative solution
-num = 15
-flag = 0
-for i in range(2, num):
-    if num % i == 0:
-        flag = 1
-        break
-if flag == 1:
-    print('Not Prime')
-else:
-    print("Prime")
-
 
 # Method 2: Optimization by break condition
 num = 15
@@ -69,25 +57,6 @@ else:
     print("Prime")
 
 
-# Method 5: Optimization by skipping even iteration
-num = 15
-flag = 0
-if num < 2:
-    flag = 1
-elif num == 2:
-    flag = 0
-else:
-    for i in range(3, int(pow(num, 0.5)+1), 2):
-        if num % i == 0:
-            flag = 1
-            break
-
-if flag == 1:
-    print('Not Prime')
-else:
-    print("Prime")
-
-
 """
 Print all prime numbers in an interval.
 """
@@ -101,3 +70,31 @@ for num in range(lower, upper+1):
                 break
         else:
             print(num)
+
+
+
+"""
+python program to get first 10 prime numbers in a list.
+"""
+
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def get_first_n_primes(n):
+    primes = []
+    num = 2  # Starting from the first prime number
+    while len(primes) < n:
+        if is_prime(num):
+            primes.append(num)
+        num += 1
+    return primes
+
+# Get the first 10 prime numbers
+first_10_primes = get_first_n_primes(10)
+
+print("First 10 prime numbers:", first_10_primes)

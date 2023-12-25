@@ -1,6 +1,6 @@
 """
 10. Write a Python program to change a given string to a newly string where the
-first and last chars have been exchanged.
+first and last chars have been eiixchanged.
 'abcd' --> 'dbca'
 
 https://www.geeksforgeeks.org/python-program-to-swap-the-first-and-the-last-character-of-a-string/

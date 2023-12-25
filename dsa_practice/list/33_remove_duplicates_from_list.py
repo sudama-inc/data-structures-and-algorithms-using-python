@@ -4,6 +4,7 @@
 7. Write a Python program to remove duplicates from a list. 
 
 """
+import numpy as np
 
 lst = [3,4,5,7,3,2,4,2,2]
 

@@ -18,6 +18,22 @@ https://www.geeksforgeeks.org/python-replace-multiple-occurrence-of-character-by
 from itertools import groupby
 
 
+def remove_all_consecutive(st):
+    ch = st[0]
+    res = ""
+    for i in range(1, len(st)):
+        if i == 0:
+            res += st[i]
+        elif st[i] != ch:
+            res += st[i]
+            ch = st[i]
+    return res
+
+st ='aabbbcdeffeeff'
+print(remove_all_consecutive(st))
+
+
+
 # Method 1
 def remove_all_consecutive(str1):
     result_str = []
