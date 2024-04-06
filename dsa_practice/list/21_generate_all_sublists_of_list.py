@@ -26,6 +26,22 @@ l1 = [1, 2, 3]
 print(sub_lists(l1))
 
 
+def get_all_combinations(input_list):
+    result = [[]]
+
+    for element in input_list:
+        current_combinations = []
+        for combination in result:
+            current_combinations.append(combination + [element])
+        result.extend(current_combinations)
+
+    return result
+
+input_list = [1, 2, 3]
+combinations = get_all_combinations(input_list)
+print(combinations)
+
+
 def generateSublists(lst):
     # Base case
     if len(lst) == 0:

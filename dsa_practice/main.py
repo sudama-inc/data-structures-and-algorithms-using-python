@@ -17,52 +17,11 @@
 # print(op)
 
 
-# Check Palindrome
-# n = 21123
-# temp = n
-# res = 0
-# while (n != 0):
-#     res = ((res*10) + (n % 10))
-#     n = n//10
 
-# if temp == res:
-#     print('palindrome')
-# else:
-#     print('not palindrome')
-
-
-# num = 1214
-# temp = num
-# sum = 0
-# while num > 0:
-#     sum += num % 10
-#     num = num // 10
-# print(sum)
-
-
-
-
-# st = 'restart'
-# k = '$'
-# s = ''
-
-# def remove_all_consecutive(st):
-#     k = '$'
-#     res = ""
-#     for i in range(len(st)):
-#         if st[i] in res:
-#             res += k
-#         else:
-#             res += st[i]
-
-#     return res
-
-# st ='restart'
-# print(remove_all_consecutive(st))
-
-# def reverse_words(st):
-#     pass
-
-# if __name__ == "__main__":
-#     input = "reverse"
-#     print(reverse_words(input))
+# import random as re
+#
+#
+# # Generate 10 random integers between 1 and 10 (inclusive)
+# random_integers = re.sample(range(1, 11), 10)
+#
+# print(random_integers)

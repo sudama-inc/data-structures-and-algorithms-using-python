@@ -15,3 +15,12 @@ for i in lst[:5]:
     except KeyError:
         freq[i] = 1
 print(freq)
+
+
+res = {}
+for i in lst:
+    if i not in res.keys():
+        res[i] = 1
+    else:
+        res[i] += 1
+print(res)

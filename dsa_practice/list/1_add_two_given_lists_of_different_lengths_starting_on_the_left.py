@@ -26,19 +26,25 @@ https://www.geeksforgeeks.org/python-adding-two-list-elements/
 
 
 from itertools import zip_longest
-a = [0, 1, 3, 4]
-b = [5, 6]
 
-iter_len = len(a)-(len(b)-1)
 
-for j in range(len(a), 0, -1):
-    if j-iter_len < 0:
-        break
-    else:
-        a[j-1] = a[j-1] + b[j-iter_len]
-print(a)
+def pad_zero(lst, max_len):
+    while len(lst) != max_len:
+        lst.append(0)
+    return lst
 
-# Method 2
+def add_lists(lst1, lst2, max_len):
+    res = []
+    for i in range(max_len):
+        res.append(pad_zero(lst1, max_len)[i]+pad_zero(lst2, max_len)[i])
+    return res
+
+lst1 = [2, 4, 7, 0, 5, 8]
+lst2 = [3, 3, -1, 7]
+max_len = max(len(lst1), len(lst2))
+print(add_lists(lst1, lst2, max_len))
+
+
 list1 = [150, 177, 454, 126]
 list2 = [9, 44, 2, 168, 66, 80, 123, 6, 180, 184]
 # List comprehension
@@ -49,8 +55,6 @@ print(output)
 
 
 # Method 3
-list1 = [150, 177, 454, 126]
-list2 = [9, 44, 2, 168, 66, 80, 123, 6, 180, 184]
 output = []
 
 longer_length = max(len(list1), len(list2))

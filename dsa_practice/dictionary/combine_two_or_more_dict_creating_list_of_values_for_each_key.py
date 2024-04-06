@@ -50,3 +50,16 @@ for key in keys:
     output[key] = [d1.get(key), d2.get(key)]
 
 print(output)
+
+
+d1 = {'w': 50, 'x': 100, 'y': 'Green', 'z': 400}
+d2 = {'x': 300, 'y': 'Red', 'z': 600, 'a':10}
+
+for i in d1:
+    d1[i] = [d1[i]]
+for i in d2:
+    if i in d1.keys():
+        d1[i].append(d2[i])
+    else:
+        d1[i]=[d2[i]]
+print(d1)

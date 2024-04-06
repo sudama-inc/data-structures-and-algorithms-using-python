@@ -67,3 +67,25 @@ test_list1 = [1, 4, 5]
 test_list2 = [3, 8, 9]
 res = interleave_lists(test_list1, test_list2)
 print(res)
+
+
+def interleave_lists(lists):
+    max_length = max(len(lst) for lst in lists)
+    result = []
+
+    for i in range(max_length):
+        for lst in lists:
+            if i < len(lst):
+                result.append(lst[i])
+
+    return result
+
+original_lists = [
+    [2, 4, 7, 0, 5, 8],
+    [2, 5, 8],
+    [0, 1],
+    [3, 3, -1, 7]
+]
+
+interleaved_list = interleave_lists(original_lists)
+print(interleaved_list)
